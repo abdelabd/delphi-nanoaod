@@ -21,7 +21,7 @@ echo "Working directory: $WORKDIR"
 trap 'rm -rf "$WORKDIR"' EXIT
 
 # Copy everything into the temp directory
-BASEDIR="/afs/cern.ch/user/z/zhangj/private/DELPHI/delphi-nanoaod"
+BASEDIR="/afs/cern.ch/user/a/aelabd/public/ztautau/LEP/delphi-nanoaod"
 cp "$BASEDIR/build/delphi-nanoaod/delphi-nanoaod" "$WORKDIR/"
 cp "$BASEDIR/config/delphi-nanoaod.yaml" "$WORKDIR/"
 cp "$BASEDIR/scripts/treefy.C" "$WORKDIR/"

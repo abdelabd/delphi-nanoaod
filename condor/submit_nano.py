@@ -9,7 +9,7 @@ import time
 import re
 import yaml
 
-opendata_dir = Path("/eos/opendata/delphi")
+opendata_dir = Path("/eos/user/a/aelabd/ztautau/LEP/Delphi-Sim-Pipeline/output")
 
 def extract_version_info(version_str):
     """
@@ -32,7 +32,7 @@ def build_output_paths(cfg, date="251219"):
     Build output paths for both TPCNtuple and DelphiNanoAOD.
     Returns: (tpcntuple_dir, delphinanoaod_dir, TYPE)
     """
-    base = Path("/eos/experiment/eealliance/Samples/DELPHI")
+    base = Path("/eos/user/a/aelabd/ztautau/LEP/delphi-nanoaod/pipi_root_out")
     
     # Extract version info
     year, short_version = extract_version_info(cfg["version"])
@@ -97,8 +97,8 @@ def build_patterns(nickname):
         # Pythia8 files are in the new EOS structure under SDST
         year, short_version = extract_version_info(cfg["version"])
         energy = cfg.get("copy_energy") or cfg["energy"]
-        base = Path("/eos/experiment/eealliance/Samples/DELPHI")
-        pattern = str(base / year / energy / "MC" / short_version / "SDST" / cfg["stream"] / "251219" / "simana*sdst")
+        base = Path("/eos/user/a/aelabd/ztautau/LEP/Delphi-Sim-Pipeline/output")
+        pattern = str(base / "simana*sdst")
         patterns = [pattern]
     else:
         # Original sim type logic
@@ -163,7 +163,8 @@ if __name__ == "__main__":
     
     #nickname = "short94_c2"
     #nickname = "sh_qqps_e91.25_c94_2l_c2"
-    nickname = "sh_kk2f4146qqpy_e91.25_c94_2l_c2"
+    nickname = "pipi_channel"
+    # nickname = "sh_kk2f4146qqpy_e91.25_c94_2l_c2"
     #nickname = "sh_kk2f4146qqpydcy_e91.25_c94_2l_c2"
     #nickname = "sh_kk2f4146qqardcy_e91.25_r94_2l_c2"
     #nickname = "sh_apacic105_e91.25_w94_2l_c2"
