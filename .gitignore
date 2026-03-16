@@ -8,3 +8,13 @@ eos
 xs*/
 *.log
 dict*
+
+# auto-generated stuff
+aelabd.cc
+condor/condorOut/
+condor/x509_proxy
+convert_simulation.sh
+pipi.pdl
+scripts/treefy_C.d
+scripts/treefy_C.so
+scripts/treefy_C_ACLiC_dict_rdict.pcm
