@@ -14,7 +14,7 @@ aelabd.cc
 condor/condorOut/
 condor/x509_proxy
 convert_simulation.sh
-pipi.pdl
+*.pdl
 scripts/treefy_C.d
 scripts/treefy_C.so
 scripts/treefy_C_ACLiC_dict_rdict.pcm

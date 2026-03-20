@@ -354,3 +354,11 @@ pipi_channel:
   energy: "91.25"      
   copy_energy: "91.25" 
   extension: .sdst
+
+mumu_channel:
+  type: sim
+  stream: pythia8  
+  version: v94c        
+  energy: "91.25"      
+  copy_energy: "91.25" 
+  extension: .sdst
